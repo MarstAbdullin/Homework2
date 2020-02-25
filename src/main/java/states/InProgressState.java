@@ -9,10 +9,12 @@ public class InProgressState extends State {
     }
 
     public void up(String... args) {
+        log("up");
         taskImpl.setState(new ResolvedState(taskImpl));
     }
 
     public void down(String... args) {
+        log("down");
         taskImpl.setState(new AssignedState(taskImpl));
     }
 

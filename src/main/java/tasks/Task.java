@@ -22,4 +22,6 @@ public interface Task {
     public void setDevId(Integer devId);
 
     public Integer getDevId();
+
+    public Task copy();
 }

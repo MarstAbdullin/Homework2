@@ -11,12 +11,14 @@ public class ResolvedState extends State {
 
     @Override
     public void up(String... args) {
+        log("up");
         taskImpl.setState(new TestingState(taskImpl));
         taskImpl.setTesterId(Integer.parseInt(args[0]));
     }
 
     @Override
     public void down(String... args) {
+        log("down");
         taskImpl.setState(new InProgressState(taskImpl));
     }
 

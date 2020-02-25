@@ -27,13 +27,7 @@ public class App {
                 state.down(deleteFirstElements(parsedQuery, 2));
             }
             if (parsedQuery[0].equals("copy")) {
-                Task task = tasks.get(Integer.parseInt(parsedQuery[1]));
-                Task taskImpl = new TaskImpl(task.getText());
-                taskImpl.setState(task.getState());
-                taskImpl.setError(task.getError());
-                taskImpl.setTesterId(task.getTesterId());
-                taskImpl.setDevId(task.getDevId());
-                tasks.add(taskImpl);
+                tasks.add(tasks.get(Integer.parseInt(parsedQuery[1])).copy());
             }
         }
     }

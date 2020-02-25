@@ -10,10 +10,12 @@ public class BacklogState extends State {
     }
 
     public void up(String... args) {
+        log("up");
         taskImpl.setState(new OpenState(taskImpl));
     }
 
     public void down(String... args) {
+        log("down");
     }
 
 }
